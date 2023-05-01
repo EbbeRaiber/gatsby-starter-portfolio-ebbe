@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { container, heading, navLinks, navLinkItem, navLinkText} from './layout.module.css'
+import { container, heading, navLinks, navLinkItem, navLinkText, backGround} from './layout.module.css'
 const Layout = ({ pageTitle, children }) => {
 
     return (
@@ -11,7 +11,7 @@ const Layout = ({ pageTitle, children }) => {
                     <li className={navLinkItem}><Link to="/" className={navLinkText}>Home</Link></li>
                     <li className={navLinkItem}><Link to="/about" className={navLinkText}>About</Link></li>
                 </ul>
-                <main>
+                <main className={backGround}>
                     <h1 className={heading}>{pageTitle}</h1>
                     {children}
                 </main>
